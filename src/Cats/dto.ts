@@ -4,7 +4,7 @@
 
 /* eslint-disable import/prefer-default-export */
 
-export class GetCatDto {
+export class CatDto {
   readonly age: number;
 
   readonly breed: string;

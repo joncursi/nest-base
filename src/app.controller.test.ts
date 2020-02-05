@@ -20,12 +20,8 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return a cat', () => {
-      expect(appController.getCat()).toEqual({
-        age: 1,
-        breed: 'Bombay',
-        name: 'Marvin',
-      });
+    it('should return hello world', () => {
+      expect(appController.getHelloWorld()).toEqual('Hello world!');
     });
   });
 });

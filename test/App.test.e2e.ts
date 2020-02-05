@@ -6,7 +6,7 @@ import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
 import { Test, TestingModule } from '@nestjs/testing';
 
-import AppModule from '../src/App/app.module';
+import AppModule from '../src/app.module';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
@@ -21,14 +21,11 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
+  // eslint-disable-next-line jest/expect-expect
   it('/ (GET)', () => {
     return request(app.getHttpServer())
       .get('/')
       .expect(200)
-      .expect({
-        age: 1,
-        breed: 'Bombay',
-        name: 'Marvin',
-      });
+      .expect('Hello world!');
   });
 });
