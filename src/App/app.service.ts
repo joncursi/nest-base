@@ -7,7 +7,11 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 class AppService {
-  getHello = constant('Hello World!');
+  getCat = constant({
+    age: 1,
+    breed: 'Bombay',
+    name: 'Marvin',
+  });
 }
 
 export default AppService;

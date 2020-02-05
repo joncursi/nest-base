@@ -4,8 +4,8 @@
 
 import { Test, TestingModule } from '@nestjs/testing';
 
-import AppController from './AppController';
-import AppService from './AppService';
+import AppController from './app.controller';
+import AppService from './app.service';
 
 describe('AppController', () => {
   let appController: AppController;
@@ -20,8 +20,12 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return a cat', () => {
+      expect(appController.getCat()).toEqual({
+        age: 1,
+        breed: 'Bombay',
+        name: 'Marvin',
+      });
     });
   });
 });

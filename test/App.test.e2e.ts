@@ -6,7 +6,7 @@ import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
 import { Test, TestingModule } from '@nestjs/testing';
 
-import AppModule from '../src/AppModule';
+import AppModule from '../src/App/app.module';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
@@ -25,6 +25,10 @@ describe('AppController (e2e)', () => {
     return request(app.getHttpServer())
       .get('/')
       .expect(200)
-      .expect('Hello World!');
+      .expect({
+        age: 1,
+        breed: 'Bombay',
+        name: 'Marvin',
+      });
   });
 });

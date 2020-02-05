@@ -30,7 +30,7 @@
 There are lots of npm scripts at your disposal during local development.
 Here are some of the more important ones:
 
-| Start command      | Description                                            |
+| Script             | Description                                            |
 |:------------------ |:------------------------------------------------------ |
 | npm run dev        | Starts the local dev server.                           |
 | npm run build      | Builds the production bundle.                          |
