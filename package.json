@@ -69,11 +69,9 @@
   },
   "scripts": {
     "build": "nest build",
+    "dev": "nest start --watch",
     "prebuild": "rimraf dist",
-    "start": "nest start",
-    "start:debug": "nest start --debug --watch",
-    "start:dev": "nest start --watch",
-    "start:prod": "node dist/main",
+    "start": "node dist/main",
     "test": "npm-run-all test:**",
     "test:e2e": "jest --config jest.config.e2e.js",
     "test:lint:js": "eslint . --ext .js --quiet --fix",
